@@ -1,0 +1,142 @@
+# 第一題進階題：計算陣列的平方值 : 輸入一個整數N，再依序輸入N個整數置於陣列中，計算各元素的平方值，再列出此算出平方值後的陣列。 
+數字範圍：整數N範圍 1 – 10；其他整數1 – 100 
+```C
+#include <stdio.h>
+int main()
+{
+	int n,i,a[10];
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&a[i]);
+		printf("%d,",a[i]*a[i]);
+	}
+	printf("\n");
+}```
+#第二題進階題：大小寫轉換 : 讀入一個字串(至多10個字元)，將字串中的大小寫英文字母相互轉換(大寫轉為小寫，小寫轉為大寫)後輸出
+```C
+#include <stdio.h>
+int main()
+{
+	char c[10];
+	int i=0;
+	
+	scanf("%s",&c);	
+	
+	while(c[i]!='\0')
+	{
+		if('A'<=c[i] && c[i]<='Z')
+		{
+			printf("%c",c[i]-'A'+'a');
+		}
+		else if('a'<=c[i] && c[i]<='z')
+		{
+			printf("%c",c[i]-'a'+'A');
+		}
+		else
+			
+			printf("%c",c[i]);
+			i++;
+	}
+	
+	printf("\n");
+}
+```
+#第三題基礎題：計算幾週與幾天 : 一週有7 天，讀入天數，計算該天數是幾週又幾天。 
+數字範圍：整數1 – 365  
+```C
+#include <stdio.h>
+int main()
+{
+	int a,b;
+	scanf("%d",&a);
+	printf("%d %d\n",a/7,a%7);
+}
+```
+#第四題基礎題：計程車資計算 : 輸入里程公尺數，輸出應付的車資。計程車資計算方式為：起跳100 元(2000公尺)，續跳5元(每500公尺)。 
+數字範圍：整數1 – 100000。  
+```C
+#include <stdio.h>
+int main()
+{
+	int n,a,b=0;
+	scanf("%d",&n);
+	if(n<2000)
+	{
+		printf("100\n");
+	}
+	else if(n>2000)
+	{
+		n-=2000;
+		if(n<500)
+		{
+			printf("105\n");
+		}
+		else
+		{ 	
+		 	a=n/500;
+		 	if(n%500!=0)
+		 	{
+		 		a++;
+		 	}
+		}	
+			printf("%d\n",100+a*5);
+	}
+	return 0;	
+}
+```
+#第五題基礎題：兩數間可被5整除的整數 : 輸入兩個整數，找出兩數之間所有可以被5整除的整數。 
+數字範圍：2個整數1 – 10000 
+```C
+#include <stdio.h>
+int main()
+{
+	int n,a,b,i;
+	scanf("%d %d",&a,&b);
+	if(b>a)
+		for(i=a;i<b;i++)
+		{
+			if(i%5==0)
+			{
+				printf("%d\n",i);
+			}
+		}
+	if(a>b)
+		for(i=b;i<a;i++)
+		{
+			if(i%5==0)
+			{
+				printf("%d\n",i);
+			}
+		}
+}
+```
+#第六題整數間最大距離 : 輸入3個相異整數，找出整數間最大的距離。 
+數字範圍：整數1 – 10000  
+```C
+#include <stdio.h>
+int s[3];
+int main()
+{
+	int q,w;
+	for(int i=0;i<3;i++)
+	{
+		scanf("%d",&s[i]);
+		q=s[0];
+		w=s[0];
+		for(int i=0;i<3;i++)
+		{
+			if(q>s[i])
+			{	
+				q=s[i];
+			}
+			else if(w<s[i])
+			{
+				w=s[i];
+			}
+		}		
+	
+	}
+	printf("%d\n",w-q);
+}
+```
