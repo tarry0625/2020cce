@@ -13,9 +13,9 @@ int main()
     }
 
     struct DATA c;
-    printf("c: %d %d ¹³¶Ã½X\n",c.x,c.y);
+    printf("c: %d %d åƒäº‚ç¢¼\n",c.x,c.y);
 
-    c=b; ///¸û¦nªº¼gªk: c.x=b.x; c.y=b.y;
-    printf("c: %d %d ¹³¶Ã½X\n",c.x,c.y);
+    c=b; ///è¼ƒå¥½çš„å¯«æ³•: c.x=b.x; c.y=b.y;
+    printf("c: %d %d åƒäº‚ç¢¼\n",c.x,c.y);
 
 }
