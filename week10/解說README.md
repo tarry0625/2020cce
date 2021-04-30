@@ -1,5 +1,5 @@
 解說
-
+```c
 #include <stdio.h>
 #include <string.h>//strcmp strcpy()
 #include <stdlib.h>//qsort
@@ -52,3 +52,4 @@ int main()
 	}
 
 }
+```
